@@ -1,8 +1,8 @@
 import { useRef, useContext } from 'react';
-import { CartContext } from '../store/cart-state-context.js';
+import { CartContext } from '../store/cart-state-context.jsx';
 import CartModal from './CartModal.jsx';
 
-export default function Header({ cart, onUpdateCartItemQuantity }) {
+export default function Header() {
   const { items } = useContext(CartContext)
   const modal = useRef();
 
@@ -21,7 +21,7 @@ export default function Header({ cart, onUpdateCartItemQuantity }) {
         <button>Checkout</button>
       </>
     );
-  }
+  } 
   return (
     <>
       <CartModal
